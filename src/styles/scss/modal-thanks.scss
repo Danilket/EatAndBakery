@@ -1,0 +1,12 @@
+.modal-thanks {
+	max-width: 540px;
+}
+.modal {
+	color: $btn-text;
+	text-align: center;
+	&__apply {
+		width: 170px;
+		height: 146px;
+		margin-bottom: 25px;
+	}
+}

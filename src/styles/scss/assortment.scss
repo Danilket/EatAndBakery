@@ -1,0 +1,232 @@
+.assortment {
+	margin-bottom: 60px;
+	&__title {
+		display: inline-block;
+		margin-bottom: 22px;
+		font-size: 20px;
+	}
+	&__inner {
+		position: relative;
+		width: 270px;
+		height: 330px;
+		position: relative;
+		margin-bottom: 10px;
+		&:hover {
+			.assortment__hover {
+				opacity: 1;
+				visibility: visible;
+				transition: $delay;
+			}
+		}
+	}
+	&__hover {
+		position: absolute;
+		background: rgba(54, 45, 39, 0.65);
+		backdrop-filter: blur(20px);
+		height: 100%;
+		z-index: 3;
+		color: #fff;
+		font-size: 14px;
+		line-height: 16px;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: $delay;
+	}
+	&__hover-inner {
+		max-width: 200px;
+		margin: 0 auto;
+	}
+	&__hover-main-info {
+		margin: 45px 0 25px;
+	}
+
+	&__hover-count-info {
+		margin-bottom: 25px;
+		p {
+			margin: 0;
+		}
+	}
+	&__hover-count {
+		margin-bottom: 30px;
+	}
+	&__hover-btn {
+		width: 130px;
+		height: 34px;
+	}
+	&__list {
+		display: none;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__list--active {
+		display: flex;
+	}
+	&__item {
+		text-align: center;
+		margin: 0 15px 30px;
+	}
+	&__info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 50px;
+		background-color: rgba($text-color, 0.5);
+		backdrop-filter: blur(15px);
+	}
+	&__price {
+		font-family: "Roboto-Medium";
+	}
+	&__weight {
+		font-family: "Roboto-Light";
+		&::before {
+			content: "/";
+			margin: 0 4px;
+		}
+	}
+	&__name-info {
+		text-align: center;
+		font-size: 15px;
+	}
+	&__name {
+		font-family: "Roboto-Bold";
+		text-transform: uppercase;
+	}
+	&__look-more {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.tabs {
+	margin-bottom: 30px;
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 650px;
+		margin: 0 auto;
+	}
+	&__item-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 70px;
+		outline: none;
+		svg {
+			fill: #362d27;
+			transition: $delay;
+		}
+		span {
+			color: #362d27;
+			font-size: 12px;
+			transition: $delay;
+		}
+		&:hover {
+			span {
+				color: #b0acac;
+			}
+			svg {
+				fill: #b0acac;
+			}
+		}
+	}
+	&__item-inner--active {
+		svg {
+			fill: $accent;
+		}
+		span {
+			color: $accent;
+			font-family: "Roboto-Bold";
+		}
+		&:hover {
+			span {
+				color: $accent;
+			}
+			svg {
+				fill: $accent;
+			}
+		}
+	}
+	&__bread {
+		width: 50px;
+		height: 34px;
+		margin-top: 10px;
+	}
+	&__croissant {
+		width: 50px;
+		height: 50px;
+	}
+	&__sandwich {
+		width: 46px;
+		height: 50px;
+	}
+	&__arrow {
+		width: 14px;
+		height: 24px;
+	}
+	&__dessert {
+		width: 50px;
+		height: 50px;
+	}
+	&__pie {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.assortment {
+		&__title {
+			font-size: 30px;
+		}
+	}
+	.tabs {
+		&__item-inner {
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.assortment {
+		margin-bottom: 80px;
+		&__lists {
+			margin-bottom: 20px;
+		}
+		&__title {
+			font-size: 43px;
+			line-height: 59px;
+		}
+		&__item {
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__name-info {
+			font-size: 18px;
+		}
+	}
+	.tabs {
+		margin-bottom: 50px;
+		&__item-inner {
+			height: 120px;
+			svg {
+				width: 80px;
+				height: 80px;
+			}
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+}

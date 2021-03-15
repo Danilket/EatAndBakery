@@ -1,0 +1,196 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+body {
+	min-width: 320px;
+	overflow-x: hidden;
+	font-weight: 400;
+	font-family: "Roboto-Regular";
+}
+
+.container {
+	padding: 0 10px;
+	margin: 0 auto;
+	max-width: 1220px;
+}
+
+.whatsapp,
+.instagramm,
+.vk {
+	transition: $delay;
+}
+.whatsapp {
+	&:hover {
+		fill: #25d366;
+	}
+}
+.instagramm {
+	&:hover {
+		fill: #e95950;
+	}
+}
+.vk {
+	&:hover {
+		fill: #4c75a3;
+	}
+}
+
+.btn-fill {
+	width: 245px;
+	height: 60px;
+	background-color: $accent;
+	color: $btn-text;
+	border: none;
+	font-family: "Roboto-Bold";
+	transition: $delay;
+	border: 1px solid transparent;
+	&:hover {
+		@extend %btn-hover;
+	}
+	&:focus {
+		@extend %btn-focus;
+	}
+}
+
+.btn-call {
+	width: 170px;
+	height: 40px;
+	border: 1px solid $accent;
+	background-color: transparent;
+	color: $accent;
+	font-family: "Roboto-Bold";
+	font-size: 13px;
+	line-height: 15px;
+	transition: $delay;
+	&:hover {
+		background-color: $accent;
+		border: 1px solid $accent;
+		color: #fff;
+	}
+	&:focus {
+		background-color: $btn-focus;
+		color: $btn-text;
+		border: 1px solid $btn-focus;
+	}
+}
+
+.btn-main {
+	width: 300px;
+	height: 64px;
+	border: 1px solid $accent;
+	background-color: transparent;
+	font-family: "Roboto-Bold";
+	font-size: 16px;
+	transition: $delay;
+	&:hover {
+		@extend %btn-hover;
+	}
+	&:focus {
+		@extend %btn-focus;
+	}
+}
+
+.phone {
+	font-family: "Roboto-Bold";
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	&__svg {
+		width: 20px;
+		height: 20px;
+		fill: #ef8538;
+		margin-right: 9px;
+	}
+}
+
+.title {
+	position: relative;
+	padding-right: 65px;
+	display: inline-block;
+	font-size: 20px;
+	font-family: "NotoSerif-Bold";
+	&::after {
+		content: "";
+		position: absolute;
+		width: 50px;
+		height: 2px;
+		background-color: $accent;
+		top: 50%;
+		right: 0;
+	}
+}
+
+.text {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		padding: 0 25px;
+	}
+	.title {
+		font-size: 30px;
+		padding-right: 80px;
+		&::after {
+			width: 65px;
+		}
+	}
+	.btn-main {
+		font-size: 18px;
+	}
+	.text {
+		font-size: 16px;
+		line-height: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.title {
+		font-size: 43px;
+		line-height: 59px;
+
+		padding-right: 95px;
+		&::after {
+			width: 80px;
+		}
+	}
+	.text {
+		font-size: 18px;
+		line-height: 21px;
+	}
+}

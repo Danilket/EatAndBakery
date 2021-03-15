@@ -1,0 +1,168 @@
+.form {
+	min-height: 500px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	&__inner {
+		margin: 60px 0;
+		padding: 30px 0;
+		text-align: center;
+		background: rgba(239, 234, 229, 0.5);
+		backdrop-filter: blur(35px);
+		font-size: 15px;
+		line-height: 18px;
+	}
+	&__title {
+		font-family: "Roboto-Bold";
+		font-size: 20px;
+		line-height: 23px;
+		text-transform: uppercase;
+	}
+	&__contacts {
+		margin: 20px 0 0 0;
+		padding: 0 60px;
+	}
+	&__tel-info {
+		margin: 0 0 20px 0;
+	}
+	&__name,
+	&__tel {
+		font-size: 15px;
+		line-height: 18px;
+		padding: 14px 20px;
+		min-width: 230px;
+		border: 2px solid #362d27;
+		background-color: transparent;
+		margin: 0 10px 20px;
+		outline: none;
+		max-height: 45px;
+		&::placeholder {
+			color: #362d27;
+			opacity: 0.7;
+		}
+	}
+	&__send {
+		max-width: 230px;
+		max-height: 45px;
+		margin: 0 10px 20px;
+	}
+	&__agree {
+		font-size: 12px;
+		line-height: 14px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-evenly;
+		max-width: 234px;
+		cursor: pointer;
+		a {
+			text-decoration: underline;
+		}
+	}
+	&__checkbox-footer,
+	&__checkbox {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		margin-left: -20px;
+	}
+	&__checkbox-custom {
+		width: 14px;
+		height: 14px;
+		border: 2px solid #362d27;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__checkbox-active {
+		display: none;
+		width: 8px;
+		height: 7px;
+	}
+}
+.form-content {
+	padding: 0 20px;
+}
+
+.form__checkbox-footer:checked + .form__checkbox-custom {
+	border: 2px solid $accent;
+	background-color: $accent;
+	.form__checkbox-active-footer {
+		display: block;
+	}
+}
+.form__checkbox-footer + .form__checkbox-custom {
+	.form__checkbox-active-footer {
+		display: none;
+	}
+}
+
+.form-main-info {
+	input {
+		cursor: pointer;
+		transition: $delay;
+		&:hover {
+			border: 2px solid $accent;
+		}
+		&:focus {
+			border: 2px solid $accent;
+		}
+	}
+}
+.form__checkbox-custom {
+	transition: $delay;
+}
+.form__agree {
+	transition: $delay;
+	&:hover {
+		color: $accent;
+		.form__checkbox-custom {
+			transition: $delay;
+			border-color: $accent;
+		}
+	}
+}
+
+input.error {
+	border: 2px solid $error-color;
+	color: $error-color;
+	&:hover {
+		border: 2px solid $error-color;
+	}
+	&::placeholder {
+		color: $error-color;
+	}
+	& + .form__checkbox-custom {
+		border: 2px solid $error-color;
+	}
+	&:focus {
+		border: 2px solid $error-color;
+	}
+}
+
+@media (min-width: 1200px) {
+	.form {
+		&__inner {
+			padding: 50px 50px;
+		}
+		&__title {
+			font-size: 30px;
+			line-height: 35px;
+		}
+		&__contacts,
+		&__tel-info {
+			font-size: 18px;
+			line-height: 21px;
+		}
+		&__tel-info {
+			margin-bottom: 30px;
+		}
+		&__agree {
+			margin: 0 10px 0 auto;
+		}
+	}
+}

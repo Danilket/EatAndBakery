@@ -1,0 +1,95 @@
+.menu-burger {
+	top: 0;
+	position: fixed;
+	z-index: 20;
+	overflow-y: auto;
+	right: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: #362d27;
+	transition: $delay;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-family: "Roboto-Bold";
+	padding: 56px 0;
+	&__call {
+		background-color: transparent;
+		border: none;
+		color: #ffe9da;
+		margin-bottom: 56px;
+	}
+	&__phone {
+		display: flex;
+		font-size: 16px;
+		line-height: 19px;
+		.phone__svg {
+			margin-right: 7px;
+		}
+	}
+	&__phone-text {
+		font-size: 14px;
+		line-height: 16px;
+		margin-left: 25px;
+	}
+}
+
+.menu-burger--close {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	z-index: 5;
+	background-color: transparent;
+	border: none;
+	right: 30px;
+	top: 30px;
+	span {
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: $text-color;
+		transform: rotate(45deg);
+		&:last-child {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.burger-active {
+	right: 0;
+}
+
+.menu-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+}
+
+.overlay-active {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__burger--close {
+	width: 20px;
+	height: 20px;
+}
+
+.menu-mobile {
+	&__list {
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 56px;
+	}
+	&__item {
+		margin-bottom: 25px;
+	}
+}

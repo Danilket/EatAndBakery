@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Eat & Bakery</title>
+</head>
+
+<body>
+
+	<header class="header" data-bg="<%=require('./assets/images/header-bg.jpg')%>" data-bg-webp="<%=require('./assets/images/header-bg.webp')%>">
+		<div class="container header__container">
+			<div class="header__top">
+				<div class="header__logo">
+					<svg class="logo">
+						<use xlink:href="#logo"></use>
+					</svg>
+				</div>
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="#">Продукция</a></li>
+						<li class="menu__item"><a href="#">О пекарне</a></li>
+						<li class="menu__item"><a href="#">Адреса</a></li>
+						<li class="menu__item"><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<a href="tel:+74956932744" class="header__phone phone">
+					<svg class="phone__svg">
+						<use xlink:href="#phone"></use>
+					</svg>
+					+7 (495) 693-27-44
+				</a>
+				<button class="header__call btn-call" data-fancybox data-src="#modal-callback">
+					Заказать звонок
+				</button>
+				<button class="header__burger">
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+			<div class="header__mobile menu-burger">
+				<button class="menu-burger--close">
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="menu-burger__menu menu-mobile">
+					<ul class="menu-mobile__list">
+						<li class="menu-mobile__item"><a href="#">Продукция</a></li>
+						<li class="menu-mobile__item"><a href="#">О пекарне</a></li>
+						<li class="menu-mobile__item"><a href="#">Адреса</a></li>
+						<li class="menu-mobile__item"><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<button class="menu-burger__call" data-fancybox data-src="#modal-callback">
+					<div class="menu-burger__phone">
+						<svg class="phone__svg">
+							<use xlink:href="#phone"></use>
+						</svg>
+						+7 (495) 693-27-44
+					</div>
+					<span class="menu-burger__phone-text">Заказать звонок</span>
+				</button>
+				<div class="menu-burger__networks networks">
+					<div class="networks__inner--mobile">
+						<a href="https://www.whatsapp.com" class="networks__whatsapp--mobile">
+							<svg class="whatsapp--mobile networks__item--mobile">
+								<use xlink:href="#whatsapp"></use>
+							</svg>
+						</a>
+						<a href="https://www.instagram.com/" class="networks__instagramm--mobile">
+							<svg class="instagramm--mobile networks__item--mobile">
+								<use xlink:href="#instagramm"></use>
+							</svg>
+						</a>
+						<a href="https://vk.com/" class="networks__vk--mobile">
+							<svg class="vk--mobile networks__item--mobile">
+								<use xlink:href="#vk"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="menu-overlay"></div>
+			<div class="header__inner">
+				<div class="header__info">
+					<h1 class="header__title title">Всегда свежая крафтовая выпечка</h1>
+					<p class="header__text">Вкусная выпечка из натуральных ингредиентов с бесплатной доставкой до вашего дома</p>
+					<button class="header__order btn-fill">Заказать выпечку</button>
+				</div>
+				<div class="header__networks networks">
+					<div class="networks__inner">
+						<a href="https://www.whatsapp.com" class="networks__whatsapp">
+							<svg class="whatsapp networks__item">
+								<use xlink:href="#whatsapp"></use>
+							</svg>
+						</a>
+						<a href="https://www.instagram.com/" class="networks__instagramm">
+							<svg class="instagramm networks__item">
+								<use xlink:href="#instagramm"></use>
+							</svg>
+						</a>
+						<a href="https://vk.com/" class="networks__vk">
+							<svg class="vk networks__item">
+								<use xlink:href="#vk"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container arrow-container">
+			<button class="header__arrow-btn">
+				<svg class="header__arrow">
+					<use xlink:href="#arrow"></use>
+				</svg>
+			</button>
+		</div>
+	</header>
+
+
+
+	<section id="modal-callback" class="modal modal-callback">
+		<div class="form__inner modal__inner">
+			<div class="form__title modal__title">Заказать звонок</div>
+			<p class="form__contacts modal__contacts">Напишите ваши контакты, и мы перeзвоним вам в течение 30 минут в рабочее время</p>
+			<form action="" class="form-content modal__content">
+				<div class="form-main-info">
+					<input class="form__name modal__name" type="text" placeholder="Имя" name="name">
+					<input class="form__tel modal__tel" id="number" type="tel" placeholder="Номер телефона" name="tel">
+					<button class="form__send modal__send btn-call" type="submit">Заказать звонок</button>
+					<label class="form__agree modal__agree" for="custom-checkbox">
+						<input class="form__checkbox" id="custom-checkbox" type="checkbox" name="checkbox">
+						<div class="form__checkbox-custom modal__checkbox-custom">
+							<svg class="form__checkbox-active">
+								<use xlink:href="#checkbox"></use>
+							</svg>
+						</div>
+						<span>Даю согласие на <a href="">обработку данных</a></span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+	<section id="modal-thanks" class="modal modal-thanks">
+		<div class="form__title modal__title">Заявка отправлена!</div>
+		<p class="form__contacts modal__contacts">Наш менеджер свяжется с Вами
+			в течение 30 минут в рабочее время</p>
+		<svg class="modal__apply">
+			<use xlink:href="#modal-apply"></use>
+		</svg>
+		<button class="form__send modal__send modal-return btn-call">На главную</button>
+	</section>
+
+
+
+	<section class="assortment">
+		<div class="container">
+			<h3 class="assortment__title title">Наш ассортимент</h3>
+			<div class="assortment__tabs tabs">
+				<ul class="tabs__list">
+					<li class="tabs__item">
+						<a class="tabs__item-inner" href="#tab-1">
+							<svg class="tabs__bread">
+								<use xlink:href="#bread"></use>
+							</svg>
+							<span>Хлеб</span>
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__item-inner" href="#tab-2">
+							<svg class="tabs__croissant">
+								<use xlink:href="#croissant"></use>
+							</svg>
+							<span>Круассаны</span>
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__item-inner" href="#tab-3">
+							<svg class="tabs__sandwich">
+								<use xlink:href="#sandwich"></use>
+							</svg>
+							<span>Сендвичи</span>
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__item-inner" href="#tab-4">
+							<svg class="tabs__dessert">
+								<use xlink:href="#dessert"></use>
+							</svg>
+							<span>Десерты</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="assortment__lists">
+				<ul class="assortment__list" id="tab-1">
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/bread-1.png')%>" data-bg-webp="<%=require('./assets/images/bread-1.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">125 руб.</span>
+								<span class="assortment__weight">400г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Хлеб</div>
+							<div class="assortment__name">«Деревенский»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/bread-2.png')%>" data-bg-webp="<%=require('./assets/images/bread-2.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Хлеб</div>
+							<div class="assortment__name">«Купеческий»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/bread-3.png')%>" data-bg-webp="<%=require('./assets/images/bread-3.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Хлеб</div>
+							<div class="assortment__name">«Купеческий»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/bread-4.png')%>" data-bg-webp="<%=require('./assets/images/bread-4.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Хлеб</div>
+							<div class="assortment__name">«Купеческий»</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="assortment__list" id="tab-2">
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/croissant-1.png')%>" data-bg-webp="<%=require('./assets/images/croissant-1.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">125 руб.</span>
+								<span class="assortment__weight">400г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Круассан</div>
+							<div class="assortment__name">«Ветчина с сыром»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/croissant-2.png')%>" data-bg-webp="<%=require('./assets/images/croissant-2.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Круассан</div>
+							<div class="assortment__name">«Шоколадный»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/croissant-3.png')%>" data-bg-webp="<%=require('./assets/images/croissant-3.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Круассан</div>
+							<div class="assortment__name">«Классический»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/croissant-4.png')%>" data-bg-webp="<%=require('./assets/images/croissant-4.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Круассан</div>
+							<div class="assortment__name">«Клубничный»</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="assortment__list" id="tab-3">
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/sandwich-1.png')%>" data-bg-webp="<%=require('./assets/images/sandwich-1.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">125 руб.</span>
+								<span class="assortment__weight">400г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Сендвич</div>
+							<div class="assortment__name">«Парижский»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/sandwich-2.png')%>" data-bg-webp="<%=require('./assets/images/sandwich-2.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Сендвич</div>
+							<div class="assortment__name">«миланский»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/sandwich-3.png')%>" data-bg-webp="<%=require('./assets/images/sandwich-3.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Сендвич</div>
+							<div class="assortment__name">«Сицилийский»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/sandwich-4.png')%>" data-bg-webp="<%=require('./assets/images/sandwich-4.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Сендвич</div>
+							<div class="assortment__name">«Венский»</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="assortment__list" id="tab-4">
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/dessert-1.png')%>" data-bg-webp="<%=require('./assets/images/dessert-1.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">125 руб.</span>
+								<span class="assortment__weight">400г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Пирожное</div>
+							<div class="assortment__name">«Медовик»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/dessert-2.png')%>" data-bg-webp="<%=require('./assets/images/dessert-2.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Пирожное</div>
+							<div class="assortment__name">«тирамису»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/dessert-3.png')%>" data-bg-webp="<%=require('./assets/images/dessert-3.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Пирожное</div>
+							<div class="assortment__name">«сметанник»</div>
+						</div>
+					</li>
+					<li class="assortment__item">
+						<div class="assortment__inner" data-bg="<%=require('./assets/images/dessert-4.png')%>" data-bg-webp="<%=require('./assets/images/dessert-4.webp')%>">
+							<div class="assortment__hover">
+								<div class="assortment__hover-inner">
+									<p class="assortment__hover-main-info">Хлеб ржано-пшеничный
+										с семенами подсолнечника, добавлением солода
+										и квасного сусла.</p>
+									<div class="assortment__hover-count-info">
+										<p class="assortment__hover-proteins">Белки — 11 г.</p>
+										<p class="assortment__hover-fat">Жиры — 8 г.</p>
+										<p class="assortment__hover-carbohydrates">Углеводы — 46 г.</p>
+									</div>
+									<p class="assortment__hover-count">300 ккал / 1270 кДж</p>
+									<button class="assortment__hover-btn btn-fill">В корзину</button>
+								</div>
+							</div>
+							<div class="assortment__info">
+								<span class="assortment__price">115 руб.</span>
+								<span class="assortment__weight">350 г.</span>
+							</div>
+						</div>
+						<div class="assortment__name-info">
+							<div class="assortment__category">Пирожное</div>
+							<div class="assortment__name">«Красные ягоды»</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+
+			<button class="assortment__look-more btn-main">
+				Смотреть больше
+			</button>
+		</div>
+	</section>
+
+
+
+	<section class="chef">
+		<div class="container">
+			<h3 class="chef__title title">Шеф-пекарь<br>«Eat & Bakery» </h3>
+			<div class="chef__inner">
+				<div class="chef__photo">
+					<div class="chef__photo-inner">
+						<picture>
+							<source srcset="<%=require('./assets/images/chef.webp')%>" type="image/webp">
+							<img class="chef__img" src="<%=require('./assets/images/chef.png')%>" alt="">
+						</picture>
+					</div>
+				</div>
+				<div class="chef__info">
+					<div class="container">
+						<h4 class="chef__info-title title">Роман Добрынов</h4>
+						<div class="chef__info-text text">Мы предлагаем только свежую качественную продукцию, которую любят взрослые и дети. Пекарня «Eat & Bakery» — это аромат свежеиспеченного хлеба, домашняя пышная выпечка и вкуснейшие пироги. Мы открываемся рано утром
+							и работаем до позднего вечера для того, чтобы Вы могли приобрести только свежий хлеб и выпечку.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="about">
+		<div class="container about-container">
+			<div class="about-top">
+				<div class="about__inner">
+					<picture>
+						<source srcset="<%=require('./assets/images/hands.webp')%>" type="image/webp">
+						<img class="about__img" src="<%=require('./assets/images/hands.png')%>" alt="">
+					</picture>
+				</div>
+				<div class="about__info">
+					<div class="about__info-top">
+						<div class="about__count">12</div>
+						<div class="about__text">Лет успешной работы</div>
+					</div>
+					<div class="about__info-bottom">
+						<div class="about__count">1200</div>
+						<div class="about__text">Доставок в месяц</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-bottom">
+				<div class="about__info about__info--bottom">
+					<div class="about__info-top">
+						<div class="about__count">15</div>
+						<div class="about__text">Пекарен в Москве</div>
+					</div>
+					<div class="about__info-bottom">
+						<div class="about__count">45</div>
+						<div class="about__text">Человек в команде</div>
+					</div>
+				</div>
+				<div class="about__inner about__inner--bottom">
+					<picture>
+						<source srcset="<%=require('./assets/images/food.webp')%>" type="image/webp">
+						<img class="about__img" src="<%=require('./assets/images/food.png')%>" alt="">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="team">
+		<div class="container team-container">
+			<div class="team__info">
+				<h4 class="team__title title">Наша команда</h4>
+				<div class="team__text text">Каждый сотрудник заботится
+					о качественном выполнении своей работы, внимательно относится к соблюдению всех стандартов производства и продаж, а также старается создать уютную атмосферу
+					в наших пекарнях. Наша цель - это довольный и сытый покупатель!
+				</div>
+			</div>
+			<div class="team__photo">
+				<div class="team__photo-inner">
+					<picture>
+						<source srcset="<%=require('./assets/images/team.webp')%>" type="image/webp">
+						<img class="team__img" src="<%=require('./assets/images/team.png')%>" alt="">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="bakery">
+		<div class="container">
+			<h3 class="bakery__title title">
+				Адреса пекарен
+			</h3>
+			<ul class="bakery__list">
+				<li class="bakery__item">
+					<div class="bakery__slider">
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-1.png')%>" data-fancybox="images-1" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-1.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-1.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-1.png')%>" data-fancybox="images-1" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-1.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-1.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-1.png')%>" data-fancybox="images-1" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-1.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-1.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="bakery__info">
+						<h4 class="bakery__item-title">ЖК «Зиларт»</h4>
+						<a href="tel:+79998267425" class="bakery__info-item">
+							<svg class="bakery__icon">
+								<use xlink:href="#tel"></use>
+							</svg>
+							<span>+7 (999) 826-74-25</span>
+						</a>
+						<div class="bakery__info-item">
+							<svg class="bakery__icon">
+								<use xlink:href="#time"></use>
+							</svg>
+							<span>Ежедневно, 08:00–22:00</span>
+						</div>
+						<div class="bakery__info-item">
+							<svg class="bakery__icon bakery__icon--address">
+								<use xlink:href="#address"></use>
+							</svg>
+							<span>Москва, ул. Архитектора Щусева, 2,
+								корп. 2</span>
+						</div>
+						<button class="bakery__order btn-main">Заказать доставку</button>
+					</div>
+				</li>
+				<li class="bakery__item">
+					<div class="bakery__slider">
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-2.png')%>" data-fancybox="images-2" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-2.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-2.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-2.png')%>" data-fancybox="images-2" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-2.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-2.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-2.png')%>" data-fancybox="images-2" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-2.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-2.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="bakery__info">
+						<h4 class="bakery__item-title">ЖК «Символ»</h4>
+						<a href="tel:+78957491168" class="bakery__info-item">
+							<svg class="bakery__icon">
+								<use xlink:href="#tel"></use>
+							</svg>
+							<span>+7 (895) 749-11-68</span>
+						</a>
+						<div class="bakery__info-item">
+							<svg class="bakery__icon">
+								<use xlink:href="#time"></use>
+							</svg>
+							<span>Ежедневно, 08:00–22:00</span>
+						</div>
+						<div class="bakery__info-item">
+							<svg class="bakery__icon bakery__icon--address">
+								<use xlink:href="#address"></use>
+							</svg>
+							<span>Москва, пр. Невельского, 3, корп. 2</span>
+						</div>
+						<button class="bakery__order btn-main">Заказать доставку</button>
+					</div>
+				</li>
+				<li class="bakery__item">
+					<div class="bakery__slider">
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-3.png')%>" data-fancybox="images-3" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-3.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-3.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-3.png')%>" data-fancybox="images-3" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-3.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-3.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+						<div class="bakery__photo">
+							<a href="<%=require('./assets/images/bakery-3.png')%>" data-fancybox="images-3" data-width="800" data-height="600">
+								<picture>
+									<source srcset="<%=require('./assets/images/bakery-3.webp')%>" type="image/webp">
+									<img class="bakery__img" src="<%=require('./assets/images/bakery-3.png')%>" alt="">
+								</picture>
+							</a>
+							<svg class="bakery__lupa">
+								<use xlink:href="#lupa"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="bakery__info">
+						<h4 class="bakery__item-title">ЖК «Хорошевский»</h4>
+						<a href="tel:+79853259004" class="bakery__info-item">
+							<svg class="bakery__icon">
+								<use xlink:href="#tel"></use>
+							</svg>
+							<span>+7 (985) 325-90-04</span>
+						</a>
+						<div class="bakery__info-item">
+							<svg class="bakery__icon">
+								<use xlink:href="#time"></use>
+							</svg>
+							<span>Ежедневно, 08:00–22:00</span>
+						</div>
+						<div class="bakery__info-item">
+							<svg class="bakery__icon bakery__icon--address">
+								<use xlink:href="#address"></use>
+							</svg>
+							<span>Москва, 3-я Хорошёвская ул., 25,
+								корп. 2</span>
+						</div>
+						<button class="bakery__order btn-main">Заказать доставку</button>
+					</div>
+				</li>
+			</ul>
+			<button class="bakery__all-address btn-fill">Все адреса</button>
+		</div>
+	</section>
+
+
+
+	<section class="form" data-bg="<%=require('./assets/images/form-bg.jpg')%>" data-bg-webp="<%=require('./assets/images/form-bg.webp')%>">
+		<div class="container">
+			<div class="form__container">
+				<div class="form__inner">
+					<div class="form__title">Остались вопросы?</div>
+					<p class="form__contacts">Оставьте свои контакты
+						и мы свяжемся с вами</p>
+					<p class="form__tel-info">Или позвоните нам: +7 (495) 693-27-44</p>
+					<form action="" class="form-content display-content">
+						<div class="form-main-info">
+							<input class="form__name" type="text" placeholder="Имя" name="name-footer">
+							<input class="form__tel" id="number-footer" type="tel" placeholder="Номер телефона" name="tel-footer">
+							<button class="form__send btn-fill" type="submit">Отправить</button>
+							<label class="form__agree" for="custom-checkbox-footer">
+								<input class="form__checkbox-footer" id="custom-checkbox-footer" type="checkbox" name="checkbox-footer">
+								<div class="form__checkbox-custom">
+									<svg class="form__checkbox-active-footer">
+										<use xlink:href="#checkbox"></use>
+									</svg>
+								</div>
+								<span>Даю согласие на <a href="">обработку данных</a></span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__info">
+				<svg class="footer__logo logo">
+					<use xlink:href="#logo"></use>
+				</svg>
+				<nav class="footer__nav">
+					<ul class="footer__list">
+						<li class="footer__item"><a href="">Продукция</a></li>
+						<li class="footer__item"><a href="">О пекарне</a></li>
+						<li class="footer__item"><a href="">Адреса</a></li>
+						<li class="footer__item"><a href="">Контакты</a></li>
+					</ul>
+				</nav>
+				<button class="footer__btn btn-call" data-fancybox data-src="#modal-callback">Заказать звонок</button>
+			</div>
+			<div class="footer__networks">
+				<div class="networks__inner networks__inner--footer">
+					<a href="https://www.whatsapp.com" class="networks__whatsapp">
+						<svg class="whatsapp networks__item">
+							<use xlink:href="#whatsapp"></use>
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/" class="networks__instagramm">
+						<svg class="instagramm networks__item">
+							<use xlink:href="#instagramm"></use>
+						</svg>
+					</a>
+					<a href="https://vk.com/" class="networks__vk">
+						<svg class="vk networks__item">
+							<use xlink:href="#vk"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="footer__copyright">
+				<span>© 2009-2021 «Eat & Bakery» кафе-пекарня</span>
+			</div>
+		</div>
+
+	</footer>
+
+
+</body>
+
+</html>

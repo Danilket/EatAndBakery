@@ -1,0 +1,102 @@
+.fancybox-content {
+	background-color: #362d27;
+	padding: 30px;
+}
+.modal-callback {
+	max-width: 540px;
+}
+
+.modal {
+	display: none;
+
+	&__inner {
+		max-width: 600px;
+		margin: 0;
+		padding: 0;
+		background: none;
+		color: $btn-text;
+	}
+	&__title {
+		margin-bottom: 15px;
+		text-transform: none;
+	}
+	&__contacts {
+		margin: 0 auto 15px;
+		padding: 0;
+		max-width: 400px;
+	}
+	&__content {
+		padding: 0;
+	}
+	&__send {
+		display: block;
+		margin: 0 auto 20px;
+		min-width: 230px;
+		min-height: 45px;
+	}
+	&__name,
+	&__tel {
+		border: 2px solid $btn-text;
+		color: $btn-text;
+
+		&::placeholder {
+			color: $btn-text;
+		}
+	}
+	&__checkbox-custom {
+		border: 2px solid $btn-text;
+	}
+}
+
+.form__checkbox:checked + .form__checkbox-custom {
+	border: 2px solid $accent;
+	background-color: $accent;
+	.form__checkbox-active {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	.fancybox-content {
+		padding: 35px;
+	}
+	.modal {
+		&__title {
+			font-size: 30px;
+			line-height: 45px;
+		}
+		&__contacts {
+			font-size: 18px;
+			line-height: 23px;
+		}
+		&__name,
+		&__tel {
+			font-size: 17px;
+			line-height: 20px;
+		}
+		&__send {
+			font-size: 17px;
+			line-height: 20px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.fancybox-content {
+		padding: 40px;
+	}
+	.modal {
+		&__title {
+			font-size: 42px;
+			line-height: 49px;
+		}
+		&__contacts {
+			font-size: 21px;
+			line-height: 25px;
+			margin-bottom: 40px;
+		}
+		&__agree {
+			margin: auto;
+		}
+	}
+}
